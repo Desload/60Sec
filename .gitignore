@@ -63,7 +63,6 @@ Logs/AssetImportWorker0.log
 crashlytics-build.properties
 
 *.csproj.meta
-*.meta
 
 # OS Generated
 desktop.ini
