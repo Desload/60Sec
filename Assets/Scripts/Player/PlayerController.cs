@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static PlayerController Instance { get; private set; }
+
+    private CharacterControll _characterControlls;
+
+    public Vector2 MoveVector => _characterControlls.Movement.Move.ReadValue<Vector2>();
+
+    private void Awake()
     {
-        
+        Instance = this;
+
+        _characterControlls = new CharacterControll();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        _characterControlls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        _characterControlls.Disable();
     }
 }
