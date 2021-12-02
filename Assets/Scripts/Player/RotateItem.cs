@@ -16,6 +16,6 @@ public class RotateItem : MonoBehaviour
         //transform.up = directionToLookAt;
 
         var rotate = Mathf.Atan2(pos.y, pos.x) * Mathf.Rad2Deg;
-        transform.DORotateQuaternion(Quaternion.Euler(0, 0, rotate - 90), 0.4f);
+        transform.DORotateQuaternion(Quaternion.Euler(0, 0, rotate - 90), 0.25f);
     }
 }
