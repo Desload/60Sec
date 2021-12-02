@@ -28537,6 +28537,7 @@ GameObject:
   - component: {fileID: 1054506199777010277}
   - component: {fileID: 1054506199777010283}
   - component: {fileID: 5656083497947273175}
+  - component: {fileID: 8074314352549904643}
   m_Layer: 0
   m_Name: Snow
   m_TagString: Untagged
@@ -32548,7 +32549,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc5cdd05832da3e4fa1d2f1d31614287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  snowContainer: {fileID: 8074314352549904643}
   tilemap: {fileID: 1054506199777010282}
+  PlayerAnimator: {fileID: 0}
+--- !u!114 &8074314352549904643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054506199777010279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68718e7cba50cae4e90bbafc44c49033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map: {fileID: 1054506199777010282}
+  tileSprites:
+  - {fileID: 2148025263258620051, guid: f69a7c2aa04324e4e87cfd916b91aeb0, type: 3}
+  - {fileID: 6457493582668260653, guid: f69a7c2aa04324e4e87cfd916b91aeb0, type: 3}
+  - {fileID: -4137592139129433462, guid: f69a7c2aa04324e4e87cfd916b91aeb0, type: 3}
 --- !u!1 &1054506199885512924
 GameObject:
   m_ObjectHideFlags: 0
