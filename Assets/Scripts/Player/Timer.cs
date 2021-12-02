@@ -6,7 +6,6 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    // Start is called before the first frame update
     public float time = 60;
     public GameObject canvasTimer;
     void Start()
