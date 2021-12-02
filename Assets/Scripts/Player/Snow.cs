@@ -8,8 +8,7 @@ public class Snow : MonoBehaviour
     public Tilemap tilemap;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var tile = tilemap.WorldToCell(collision.gameObject.transform.position);
-        Debug.Log(tilemap.GetTile(tile));
+        var tile = tilemap.WorldToCell((Vector2)collision.gameObject.transform.position);
         tilemap.SetTile(tile, null);
     }
 }
