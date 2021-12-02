@@ -255,7 +255,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.09375, y: 1.09375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 1514117538575755547}
   - component: {fileID: 1191493297770628096}
   - component: {fileID: 3348135703659036316}
+  - component: {fileID: 791903002975775964}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -349,3 +350,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.63502467, y: 0.47761965}
   m_EdgeRadius: 0
+--- !u!114 &791903002975775964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7961508700338706923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b1da96528fbdf42ab1ae34333b4d50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
