@@ -1097,6 +1097,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 1.2613392
       objectReference: {fileID: 0}
+    - target: {fileID: 1955817348379931045, guid: b4088ef830599b9499b44651a3ae118a, type: 3}
+      propertyPath: snowMan
+      value: 
+      objectReference: {fileID: 3173613359783037013, guid: de35677124a3fa14989aac00ca103d9f, type: 3}
     - target: {fileID: 2144762236360929728, guid: b4088ef830599b9499b44651a3ae118a, type: 3}
       propertyPath: m_EdgeRadius
       value: 0

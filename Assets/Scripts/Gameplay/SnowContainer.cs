@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class SnowContainer : MonoBehaviour
 {
     [SerializeField] private Tilemap map;
+    [SerializeField] private GameObject snowMan;
     [SerializeField] private Tile[] tiles;
 
     private void Awake()
@@ -22,8 +23,7 @@ public class SnowContainer : MonoBehaviour
         }
         if (tile == tiles[2])
         {
-            map.SetTile(pos, tiles[2]);
-            //TOD: Destroy and spawn Snowman
+            Instantiate(snowMan, pos, Quaternion.identity);
         }
         else
         {

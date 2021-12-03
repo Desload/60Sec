@@ -16,6 +16,7 @@ public class Snowman : MonoBehaviour
     {
         Observable.Interval(TimeSpan.FromSeconds(time)).TakeUntilDisable(gameObject).Subscribe(_ => SetDir());
     }
+
     void SetDir()
     {
         _dir = Random.Range(0, 4);
