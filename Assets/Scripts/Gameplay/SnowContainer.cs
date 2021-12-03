@@ -8,9 +8,12 @@ public class SnowContainer : MonoBehaviour
     [SerializeField] private Tilemap map;
     [SerializeField] private Snowman snowMan;
     [SerializeField] private Tile[] tiles;
+    [SerializeField] private GameObject partical;
 
     public void SwitchTile(Vector3Int pos, Vector3Int pPos)
     {
+        var FX = Instantiate(partical, pPos, Quaternion.identity, transform);
+        Destroy(FX, 2f);
         SoundEffect.Instance.AudioPlay();
         Tile tile = map.GetTile<Tile>(pPos);
         if (tile == null)
