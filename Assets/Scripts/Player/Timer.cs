@@ -12,23 +12,22 @@ public class Timer : MonoBehaviour
     public GameObject canvasTimer;
     [SerializeField] private CharacterMove move;
 
-    void Start()
-    {
-        Observable.Interval(TimeSpan.FromSeconds(1)).Subscribe(_ =>
-        {
-            move.speed += 0.2f;
-        });
-    }
+    private bool timeIsEnd = false;
+
 
     // Update is called once per frame
     void Update()
     {
+        if (timeIsEnd)
+            return;
+
         time -= Time.deltaTime;
         canvasTimer.GetComponent<TextMeshProUGUI>().text = time.ToString("f0");
         if (time <= 0)
         {
-            //Поражение
+            timeIsEnd = true;
+            canvasTimer.GetComponent<TextMeshProUGUI>().text = "0";
+            LevelController.Instance.TimeIsEnd();
         }
-
     }
 }
