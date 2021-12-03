@@ -8,8 +8,9 @@ public class SoundEffect : Singleton<SoundEffect>
     [SerializeField] private AudioSource player;
     public void AudioPlay()
     {
-        Debug.Log(12);
-        player.Stop();
+        if (player.isPlaying)
+            return;
+
         var value = Random.Range(0, footSteps.Length);
         player.clip = footSteps[value];
         player.Play();
