@@ -1081,6 +1081,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -5.51
       objectReference: {fileID: 0}
+    - target: {fileID: 2144762236360929728, guid: b4088ef830599b9499b44651a3ae118a, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789548599945340487, guid: b4088ef830599b9499b44651a3ae118a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789548599945340487, guid: b4088ef830599b9499b44651a3ae118a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2789548599945340487, guid: b4088ef830599b9499b44651a3ae118a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 3245349396206497830, guid: b4088ef830599b9499b44651a3ae118a, type: 3}
       propertyPath: m_Name
       value: Level
@@ -1091,15 +1107,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3245349396206497831, guid: b4088ef830599b9499b44651a3ae118a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.3093317
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3245349396206497831, guid: b4088ef830599b9499b44651a3ae118a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2571225
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3245349396206497831, guid: b4088ef830599b9499b44651a3ae118a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.713395
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3245349396206497831, guid: b4088ef830599b9499b44651a3ae118a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1127,6 +1143,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3245349396206497831, guid: b4088ef830599b9499b44651a3ae118a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7317105120574952141, guid: b4088ef830599b9499b44651a3ae118a, type: 3}
+      propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -107,9 +107,10 @@ public class Snow : MonoBehaviour
     {
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         shovelPosition = tilemap.WorldToCell((Vector2)collision.gameObject.transform.position);
+        Debug.Log(shovelPosition);
         Dig(PlayerAnimator,tilemap);
     }
 }
