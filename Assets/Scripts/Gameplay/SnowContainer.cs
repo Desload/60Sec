@@ -16,10 +16,6 @@ public class SnowContainer : MonoBehaviour
     public void SwitchTile(Vector3Int pos)
     {
         Tile tile = map.GetTile<Tile>(pos);
-        if (tile == null)
-        {
-            map.SetTile(pos, tiles[0]);
-        }
         if (tile == tiles[2])
         {
             map.SetTile(pos, tiles[2]);
