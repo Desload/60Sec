@@ -13,9 +13,13 @@ public class SnowContainer : MonoBehaviour
 
     }
 
-    public void SwitchTile(Vector3Int pos)
+    public void SwitchTile(Vector3Int pos,Vector3Int pPos)
     {
-        Tile tile = map.GetTile<Tile>(pos);
+        Tile tile = map.GetTile<Tile>(pPos);
+        if (tile == null)
+        {
+            map.SetTile(pos, tiles[0]);
+        }
         if (tile == tiles[2])
         {
             map.SetTile(pos, tiles[2]);
