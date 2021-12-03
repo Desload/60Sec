@@ -53,52 +53,24 @@ public class Snow : MonoBehaviour
         switch (dir)
         {
             case 1:
-                //tDir = t.GetTile(t.WorldToCell((Vector2Int)shovelPosition + new Vector2(-1, 0)));
                 snowContainer.SwitchTile(t.WorldToCell((Vector2Int)shovelPosition + new Vector2(2, 0)),shovelPosition + new Vector3Int(1,0,0));
                 t.SetTile(t.WorldToCell(shovelPosition + new Vector3(1, 0)), null); //убираем снег
-
-                //rand = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
-                //if(rand == new Vector2(1,0)) //tRand снег не должен попасть в tDir
-                //{
-                //   rand = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
-                //}
-
-                //tRand = t.GetTile<Tile>(t.WorldToCell((Vector2Int)shovelPosition + rand));
                 break;
 
             case 2:
-                // tDir = t.GetTile<Tile>(t.WorldToCell((Vector2Int)shovelPosition + new Vector2(1, 0)));
                 snowContainer.SwitchTile(t.WorldToCell((Vector2Int)shovelPosition + new Vector2(-2, 0)),shovelPosition + new Vector3Int(-1, 0, 0));
                 t.SetTile(t.WorldToCell(shovelPosition + new Vector3(-1, 0)), null); //убираем снег
-
-                //if (rand == new Vector2(-1, 0)) //tRand снег не должен попасть в tDir
-                //{
-                //    rand = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
-                //}
                 break;
 
             case 3:
-                //tDir = t.GetTile<Tile>(t.WorldToCell((Vector2Int)shovelPosition + new Vector2(0, -1)));
                 snowContainer.SwitchTile(t.WorldToCell((Vector2Int)shovelPosition + new Vector2(0, 2)), shovelPosition + new Vector3Int(0, 1, 0));
                 t.SetTile(t.WorldToCell(shovelPosition + new Vector3(0, 1)), null); //убираем снег
-
-                //if (rand == new Vector2(0, 1)) //tRand снег не должен попасть в tDir
-                //{
-                //    rand = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
-                //}
                 break;
 
             case 4:
-                //tDir = t.GetTile<Tile>(t.WorldToCell((Vector2Int)shovelPosition + new Vector2(0, 1)));
                 snowContainer.SwitchTile(t.WorldToCell((Vector2Int)shovelPosition + new Vector2(0, -2)), shovelPosition + new Vector3Int(0, -1, 0));
                 t.SetTile(t.WorldToCell(shovelPosition + new Vector3(0, -1)), null); //убираем снег
-
-                //if (rand == new Vector2(0, 1)) //tRand снег не должен попасть в tDir
-                //{
-                //    rand = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
-                //}
                 break;
-
         }
 
     }
@@ -108,7 +80,7 @@ public class Snow : MonoBehaviour
         if (isCan)
         {
             isCan = false;
-            Observable.Timer(TimeSpan.FromMilliseconds(500)).Subscribe(_=>isCan=true);
+            Observable.Timer(TimeSpan.FromMilliseconds(50)).Subscribe(_=>isCan=true);
             shovelPosition = tilemap.WorldToCell((Vector2)collision.gameObject.transform.position);
             Dig(PlayerAnimator, tilemap);
         }

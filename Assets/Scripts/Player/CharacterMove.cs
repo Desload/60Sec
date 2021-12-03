@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class CharacterMove : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    public float speed;
     public Animator _animator;
     public Rigidbody2D Player;
 

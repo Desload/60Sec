@@ -12,9 +12,16 @@ public class Snowman : MonoBehaviour
     public Rigidbody2D _snowman;
     public float time ; //частота смены направления снеговика
 
+    public SnowContainer container;
+
     private void Start()
     {
         Observable.Interval(TimeSpan.FromSeconds(time)).TakeUntilDisable(gameObject).Subscribe(_ => SetDir());
+    }
+
+    private void Update()
+    {
+        container.SnowSheet(new Vector3Int((int)transform.position.x, (int)transform.position.y, (int)transform.position.z));
     }
 
     void SetDir()

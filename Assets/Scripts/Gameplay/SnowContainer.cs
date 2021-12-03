@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 public class SnowContainer : MonoBehaviour
 {
     [SerializeField] private Tilemap map;
-    [SerializeField] private GameObject snowMan;
+    [SerializeField] private Snowman snowMan;
     [SerializeField] private Tile[] tiles;
 
     private void Awake()
@@ -14,16 +14,16 @@ public class SnowContainer : MonoBehaviour
 
     }
 
-    public void SwitchTile(Vector3Int pos,Vector3Int pPos)
+    public void SwitchTile(Vector3Int pos, Vector3Int pPos)
     {
         Tile tile = map.GetTile<Tile>(pPos);
         if (tile == null)
         {
-            map.SetTile(pos, tiles[0]);
+            map.SetTile(pos, tile);
         }
         if (tile == tiles[2])
         {
-            Instantiate(snowMan, pos, Quaternion.identity);
+            Instantiate(snowMan.gameObject, pos, Quaternion.identity).GetComponent<Snowman>().container = this;
         }
         else
         {
@@ -37,6 +37,15 @@ public class SnowContainer : MonoBehaviour
                 map.SetTile(pos, null);
                 map.SetTile(pos, tiles[2]);
             }
+        }
+    }
+
+    public void SnowSheet(Vector3Int pos)
+    {
+        Tile tile = map.GetTile<Tile>(pos);
+        if (tile == null)
+        {
+            map.SetTile(pos, tiles[0]);
         }
     }
 }
