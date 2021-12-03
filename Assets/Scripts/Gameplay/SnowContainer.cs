@@ -11,6 +11,7 @@ public class SnowContainer : MonoBehaviour
 
     public void SwitchTile(Vector3Int pos, Vector3Int pPos)
     {
+        SoundEffect.Instance.AudioPlay();
         Tile tile = map.GetTile<Tile>(pPos);
         if (tile == null)
         {
