@@ -11,12 +11,14 @@ public class Snowman : MonoBehaviour
     public float _speed;
     public Rigidbody2D _snowman;
     public float time ; //частота смены направления снеговика
-
+    Vector2 snowVector;
+    public Animator Animator;
     public SnowContainer container;
 
     private void Start()
     {
         Observable.Interval(TimeSpan.FromSeconds(time)).TakeUntilDisable(gameObject).Subscribe(_ => SetDir());
+        Animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -31,16 +33,22 @@ public class Snowman : MonoBehaviour
         {
             case 0:
                 _snowman.AddForce(transform.up * _speed);
+                snowVector = _snowman.GetVector(transform.up);
                 break;
             case 1:
                 _snowman.AddForce(transform.up * -_speed);
+                snowVector = _snowman.GetVector(transform.up);
                 break;
             case 2:
                 _snowman.AddForce(transform.right * _speed);
+                snowVector = _snowman.GetVector(transform.right);
                 break;
             case 3:
                 _snowman.AddForce(transform.right * -_speed);
+                snowVector = _snowman.GetVector(transform.right);
                 break;
         }
+        Animator.SetFloat("hSpeed", snowVector.x);
+        Animator.SetFloat("vSpeed", snowVector.y);
     }
 }
