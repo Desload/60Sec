@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
     public float time = 60;
     public GameObject canvasTimer;
     [SerializeField] private CharacterMove move;
-
+    [SerializeField] ScopeAdd scopeAdd;
     private bool timeIsEnd = false;
 
 
@@ -27,6 +27,7 @@ public class Timer : MonoBehaviour
         {
             timeIsEnd = true;
             canvasTimer.GetComponent<TextMeshProUGUI>().text = "0";
+            scopeAdd.EndGame();
             LevelController.Instance.TimeIsEnd();
         }
     }

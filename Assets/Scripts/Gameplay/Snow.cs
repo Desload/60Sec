@@ -47,8 +47,6 @@ public class Snow : MonoBehaviour
 
     private void Dig(Animator A, Tilemap t)
     {
-        TileBase tDir; // Тайл который двигается относительно направления
-        TileBase tRand; // Тайл который выбирается случайно
         CheckDir(A);
         switch (dir)
         {
